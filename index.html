@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>قسم الرياضيات - جامعة الحسين بن طلال | MathGate</title>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+    body {
+      font-family: "Cairo", sans-serif;
+      background: linear-gradient(135deg, #e6ebff, #f5f6ff);
+      margin: 0;
+      padding: 0;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: linear-gradient(90deg, #0041a8, #0066cc);
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    .logo {
+      height: 75px;
+      border-radius: 8px;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 1.9em;
+      font-weight: 700;
+    }
+
+    .header-text p {
+      margin: 5px 0 0;
+      font-size: 1em;
+      opacity: 0.9;
+    }
+
+    /* ===== Navigation ===== */
+    nav {
+      background: #ffffffc7;
+      backdrop-filter: blur(8px);
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 2px solid #d9e1ff;
+    }
+
+    nav a {
+      color: #0041a8;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 600;
+      transition: 0.3s;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    nav a:hover {
+      background-color: #0041a8;
+      color: white;
+    }
+
+    /* ===== Container ===== */
+    .container {
+      width: 85%;
+      margin: 40px auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding: 30px;
+      transition: 0.3s;
+    }
+
+    .container:hover {
+      transform: translateY(-2px);
+    }
+
+    h2 {
+      color: #0041a8;
+      border-right: 5px solid #0041a8;
+      padding-right: 10px;
+    }
+
+    h3 {
+      color: #333;
+      border-bottom: 2px solid #dde3ff;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    /* ===== Lists ===== */
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    li {
+      background-color: #f1f4ff;
+      border-right: 4px solid #0041a8;
+      padding: 12px 18px;
+      border-radius: 10px;
+      flex: 1 1 calc(30% - 20px);
+      min-width: 220px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    li:hover {
+      background-color: #e6edff;
+      transform: translateY(-4px);
+    }
+
+    li a {
+      text-decoration: none;
+      color: #0041a8;
+      font-weight: 600;
+    }
+
+    .mandatory { border-right-color: #28a745; background-color: #eaf7ec; }
+    .elective { border-right-color: #ffc107; background-color: #fff7e6; }
+    .plan-item { border-right-color: #0041a8; background-color: #edf2ff; }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: #002b80;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .container, header, nav {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      ul { flex-direction: column; }
+      header { flex-direction: column; text-align: center; }
+      .header-text { margin-top: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-text">
+      <h1>قسم الرياضيات - جامعة الحسين بن طلال</h1>
+      <p>بوابتك نحو فهم أعمق للرياضيات وتفوق أكاديمي متميز</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#academic-plans">الخطط الأكاديمية</a>
+    <a href="#available-courses">المواد الدراسية</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+
+  <div class="container" id="home">
+    <h2>مرحباً بك في <strong>MathGate</strong>!</h2>
+    <p>هنا تجد شروحات مبسطة، ملفات أسئلة سنوات، ومراجع شاملة لكل مادة من مواد قسم الرياضيات.</p>
+  </div>
+
+  <div class="container" id="academic-plans">
+    <h2>الخطط الأكاديمية</h2>
+    <ul>
+      <li class="plan-item"><a href="الخطة الشجرية.png" target="_blank">الخطة الشجرية</a></li>
+      <li class="plan-item"><a href="111.png" target="_blank">الخطة المواد</a></li>
+    </ul>
+  </div>
+
+  <div class="container" id="available-courses">
+    <h2>قائمة المواد الدراسية</h2>
+
+    <h3>مواد إجبارية</h3>
+    <ul>
+      <li class="mandatory">
+
+            <a href="calculus1.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">تفاضل وتكامل (1)</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="calculus2.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">تفاضل وتكامل (2)</a>
+
+       </li>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="calculus3.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">تفاضل وتكامل (3)</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="def1.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">معادلات تفاضلية عادية (1)</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="calculus4.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">التفاضل والتكامل المتقدم</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="real1.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">تحليل حقيقي (1)</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="real2.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">تحليل حقيقي (2)</a>
+
+       </li>
+
+
+       <li class="mandatory">
+
+            <a href="مركب.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">تحليل مركب (1)</a>
+
+       </li>
+
+
+       <li class="mandatory">
+
+            <a href="عددي1.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">تتحليل عددي (1)</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="عددي2.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">تحليل عددي (2)</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="دالي.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">تحليل دالي</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="نظرية الاعداد.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">نظرية الأعداد</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="نظرية المجموعات.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">نظرية المجموعات</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="نظرية الاحتمالات.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">نظرية الاحتمالات</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="خطي1.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">جبر خطي (1)</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="مجرد1.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">جبر مجرد (1)</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="مجرد2.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">جبر مجرد (2)</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="توبولوجي1.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">توبولوجي (1)</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="اقليدية.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">هندسة إقليدية وغير إقليدية</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="بحوث1.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">بحوث عمليات (1)</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="محوسبة.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">الرياضيات المحوسبة</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="احصاء1.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">إحصاء رياضي (1)</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="رسومات.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">نظرية الرسومات</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="موضوعات.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">موضوعات خاصة في الرياضيات</a>
+
+       </li>
+
+       <li class="mandatory">
+
+            <a href="طرق رياضية.html" title="شروحات وتلاخيص وأسئلة سنوات للمادة">طرق رياضية</a>
+
+       </li>
+
+    </ul>
+
+    <h3>مواد اختيارية</h3>
+    <ul>
+      <li class="elective"><a href="#">الإحصاء التطبيقي</a></li>
+      <li class="elective"><a href="#">منهجية البحث العلمي في الرياضيات</a></li>
+      <li class="elective"><a href="#">معادلات تفاضلية عادية (2)</a></li>
+      <li class="elective"><a href="#">متسلسلات زمنية</a></li>
+      <li class="elective"><a href="#">تدريس الرياضيات</a></li>
+      <li class="elective"><a href="#">جبر خطي (2)</a></li>
+      <li class="elective"><a href="#">هندسة تفاضلية</a></li>
+      <li class="elective"><a href="#">مبادئ الرياضيات التطبيقية</a></li>
+      <li class="elective"><a href="#">موضوعات خاصة في المعادلات</a></li>
+      <li class="elective"><a href="#">تحليل مركب (2)</a></li>
+      <li class="elective"><a href="#">إحصاء رياضي (2)</a></li>
+      <li class="elective"><a href="#">موضوعات خاصة في الإحصاء والاحتمالات</a></li>
+      <li class="elective"><a href="#">موضوعات خاصة في الجبر</a></li>
+      <li class="elective"><a href="#">توبولوجي (2)</a></li>
+      <li class="elective"><a href="#">بحوث عمليات (2)</a></li>
+      <li class="elective"><a href="#">البرمجة الخطية ونظرية الألعاب</a></li>
+    </ul>
+  </div>
+
+  <div class="container" id="contact">
+    <h2>تواصل معنا</h2>
+    <p>لديك اقتراح أو ملف ترغب بإضافته؟ تواصل عبر البريد: 
+      <a href="mailto:mathgate@ahu.edu.jo">mathgate@ahu.edu.jo</a></p>
+  </div>
+
+  <footer>
+    &copy; 2025 قسم الرياضيات - جامعة الحسين بن طلال | جميع الحقوق محفوظة
+  </footer>
+
+</body>
+</html>

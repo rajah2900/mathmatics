@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>جبر مجرد (1) | MathGate</title>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+    body {
+      font-family: "Cairo", sans-serif;
+      background: linear-gradient(135deg, #e6ebff, #f5f6ff);
+      margin: 0;
+      padding: 0;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: linear-gradient(90deg, #003a99, #0055cc);
+      color: white;
+      padding: 25px 8%;
+      display: flex;
+      justify-content: flex-start; /* النص لليمين */
+      align-items: center;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+      border-bottom: 4px solid #002b80;
+    }
+
+    .header-text {
+      text-align: right;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 2.2em;
+      font-weight: 700;
+    }
+
+    .header-text p {
+      margin: 5px 0 0;
+      font-size: 1.1em;
+      opacity: 0.95;
+    }
+
+    /* ===== Navigation ===== */
+    nav {
+      background: #ffffffc7;
+      backdrop-filter: blur(8px);
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 2px solid #d9e1ff;
+    }
+
+    nav a {
+      color: #0041a8;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: 600;
+      transition: 0.3s;
+      padding: 6px 14px;
+      border-radius: 20px;
+    }
+
+    nav a:hover {
+      background-color: #0041a8;
+      color: white;
+    }
+
+    /* ===== Container ===== */
+    .container {
+      width: 85%;
+      margin: 40px auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding: 30px;
+      transition: 0.3s;
+    }
+
+    .container:hover {
+      transform: translateY(-2px);
+    }
+
+    h2 {
+      color: #0041a8;
+      border-right: 5px solid #0041a8;
+      padding-right: 10px;
+    }
+
+    h3 {
+      color: #333;
+      border-bottom: 2px solid #dde3ff;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    /* ===== Lists ===== */
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    li {
+      background-color: #f1f4ff;
+      border-right: 4px solid #0041a8;
+      padding: 12px 18px;
+      border-radius: 10px;
+      flex: 1 1 calc(30% - 20px);
+      min-width: 220px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    li:hover {
+      background-color: #e6edff;
+      transform: translateY(-4px);
+    }
+
+    li a {
+      text-decoration: none;
+      color: #0041a8;
+      font-weight: 600;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background-color: #002b80;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      margin-top: 30px;
+    }
+
+    /* ===== Animation ===== */
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .container, header, nav {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      ul { flex-direction: column; }
+      header { justify-content: center; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-text">
+      <h1>جبر مجرد (1)</h1>
+      <p>قسم الرياضيات - جامعة الحسين بن طلال</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <a href="#lectures">الشروحات</a>
+    <a href="#summaries">الملخصات</a>
+    <a href="#exams">أسئلة السنوات</a>
+  </nav>
+
+  <div class="container" id="lectures">
+    <h2>الشروحات</h2>
+    <ul>
+      <li><a href="#">شرح المادة</a></li>
+    </ul>
+  </div>
+
+  <div class="container" id="summaries">
+    <h2>الملخصات</h2>
+    <ul>
+      <li><a href="#">ملخصات المادة</a></li>
+      <li><a href="#">كتب المادة</a></li>
+    </ul>
+  </div>
+
+  <div class="container" id="exams">
+    <h2>أسئلة السنوات</h2>
+    <ul>
+      <li><a href="#">أسئلة سنوات سابقة ميد</a></li>
+      <li><a href="#">أسئلة سنوات سابقة فاينل</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    &copy; 2025 MathGate | جميع الحقوق محفوظة لقسم الرياضيات - جامعة الحسين بن طلال
+  </footer>
+</body>
+</html>
